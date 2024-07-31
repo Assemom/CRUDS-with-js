@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.price{
+    padding-left: 0px !important;
+}
+
+p{
+    margin-bottom: 0px !important;
+    background-color: rgb(219, 53, 69);
+    width: 33.2% !important;
+    border-radius: 10px;
+}
+button{
+    border-radius: 20px !important;
+}
+input:focus , button:hover{
+    transform: scale(1.1);
+}

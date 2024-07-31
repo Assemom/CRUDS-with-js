@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <div class="container text-center">
+        <h1>CRUDS</h1>
+        <h3>PRODUCT MANAGEMENT SYSTEM</h3>
+
+        <div class="row mb-2">
+            <input type="text" id="title" placeholder="title" class="form-control">
+        </div>
+
+        <div class="row align-content-between">
+            <div class="col-md-2 price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price" class="form-control ">
+            </div>
+            <div class="col-md-2">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads" class="form-control">
+            </div>
+            <div class="col-md-2 discount">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount" class="form-control">
+            </div>
+            <p class="col-md-2  text-light text-center fw-bold total" id="total">Total : </p>
+        </div>
+
+        <div class="row my-2">
+            <input type="number" id="count" placeholder="count" class="form-control">
+        </div>
+        <div class="row my-2">
+            <input type="text" id="category" placeholder="category" class="form-control">
+        </div>
+        <div class="row my-2">
+            <button id="submit" class="btn btn-secondary">Create</button>
+        </div>
+
+        <div class="row my-2">
+            <input onkeyup="searchbydata(this.value)" type="text" id="search" placeholder="Search" class="form-control">
+        </div>
+        <div class="row my-2 justify-content-between">
+            <button onclick="getsearch(this.id)" id="searchbytitle" class="btn btn-secondary col-5">search by title</button>
+            <button onclick="getsearch(this.id)" id="searchbycategory" class="btn btn-secondary col-5">search by category</button>
+        </div>
+
+        <div id="deleteall" class="row my-2">
+
+        </div>
+        <table class="mt-5 table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
